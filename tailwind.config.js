@@ -17,6 +17,9 @@ module.exports = {
         rose: '#be185d',       // rose
         white: '#ffffff',      // blanc 
       },
+      animation: {
+        'spin-slower': 'spin 10s linear infinite',
+      },
     },
   },
   plugins: [],
