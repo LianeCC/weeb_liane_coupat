@@ -3,5 +3,27 @@
 @tailwind utilities;
 
 body {
-  @apply bg-[#0f1729] text-white m-0;
+  @apply font-sans text-white bg-[#0f1729] m-0 text-[18px] leading-[1.6] text-center;
+}
+
+@layer base {
+  h1 {
+    @apply font-extrabold text-[72px] leading-[1.1] text-center;
+  }
+
+  h2 {
+    @apply font-extrabold text-[56px] leading-[1.1] text-center;
+  }
+
+  h5 {
+    @apply font-bold text-[32px] leading-[1.1];
+  }
+
+  button {
+    @apply font-medium text-[20px] leading-[24px] tracking-[0.5px];
+  }
+
+  caption {
+    @apply font-bold text-[20px] leading-[1] tracking-[3px] uppercase;
+  }
 }

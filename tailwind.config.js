@@ -3,10 +3,24 @@
 module.exports = {
   content: [
     "./index.html",
-    "./src/**/*.{js,jsx}"
+    "./src/**/*.{js,jsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["Roboto", "sans-serif"],
+      },
+      colors: {
+        primary: '#0f1729',    // fond bleu foncé
+        secondary: '#9333EA',  // violet vif
+        tertiary: '#C084FC',   // violet clair
+        rose: '#be185d',       // rose
+        white: '#ffffff',      // blanc 
+      },
+    },
   },
   plugins: [],
 }
+
+
+

@@ -1,7 +1,11 @@
+import Hero from "../components/Hero";
+import Testimony from "../components/Testimony";
+
 export default function Home() {
   return (
     <div>
-      <p className="p-10">Section Home</p>
+      <Hero />
+      <Testimony />
     </div>
-  )
+  ) 
 }
