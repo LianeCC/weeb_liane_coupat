@@ -14,24 +14,24 @@ export default function BanText({
   const layout = imageLeft ? "flex-col-reverse md:flex-row-reverse" : "flex-col-reverse md:flex-row";
 
   return (
-    <section className="py-16">
+    <section className="py-0 md:py-16 my-16 md:my-0 mx-6 md:mx-0">
       
-      <div className={`flex ${layout} justify-between items-center max-w-[1280px] mx-auto`}>
+      <div className={`flex ${layout} justify-between items-center mx-8 md:mx-4 max-w-[1280px] mx-auto`}>
         
         {/* Bloc image */}
-        <div className="flex justify-center items-center">
+        <div className="hidden sm:block md:block flex justify-center items-center">
           {showSquares && <AnimatedSquare />}
           {!showSquares && imageSrc && (
             <img
               src={imageSrc}
               alt={imageAlt} 
-              className="w-[1280px] h-auto object-cover"
+              className="w-[400px] sm:w-[800px] md:w-[1280px] h-auto object-cover"
             />
           )}
         </div>
 
         {/* Bloc texte */}
-        <div className="w-full flex flex-col gap-10 text-left">
+        <div className="w-full flex flex-col gap-4 sm:gap-8 md:gap-10 text-left">
           <caption className="uppercase text-left">{caption}</caption>
           
           <h1 className="text-left">

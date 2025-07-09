@@ -3,31 +3,102 @@
 @tailwind utilities;
 
 body {
-  @apply font-sans text-white bg-[#0f1729] m-0 text-[18px] leading-[1.6] text-center;
+  @apply font-sans text-white bg-[#0f1729] m-0 text-[18px] leading-[1.4] text-center;
+}
+
+@media (min-width: 640px) {
+  body {
+    line-height: 1.6;
+  }
 }
 
 @layer base {
-  h1 {
-    @apply font-extrabold text-[72px] leading-[1.1] text-center;
+   h1 {
+    @apply font-extrabold leading-[1.1] text-[40px] text-center;
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      @apply text-[56px];
+    }
+  }
+
+  @media (min-width: 1024px) {
+    h1 {
+      @apply text-[72px];
+    }
   }
 
   h2 {
-    @apply font-extrabold text-[56px] leading-[1.1] text-center;
+    @apply font-extrabold text-[32px] leading-[1.1] text-center;
   }
+
+  @media (min-width: 768px) {
+    h2 {
+      @apply text-[46px];
+    }
+  }
+
+  @media (min-width: 1024px) {
+    h2 {
+      @apply text-[56px];
+    }
+  }
+
 
   h5 {
-    @apply font-bold text-[32px] leading-[1.1];
-  }
-
-  h6 {
     @apply font-bold text-[24px] leading-[1.1];
   }
+
+  @media (min-width: 768px) {
+    h5 {
+      @apply text-[28px];
+    }
+  }
+
+  @media (min-width: 1024px) {
+    h5 {
+      @apply text-[32px];
+    }
+  }
+
+
+  h6 {
+    @apply font-bold text-[18px] leading-[1.1];
+  }
   
+  @media (min-width: 768px) {
+    h6 {
+      @apply text-[20px];
+    }
+  }
+
+  @media (min-width: 1024px) {
+    h6 {
+      @apply text-[24px];
+    }
+  }
+
+
   button {
     @apply font-medium text-[20px] leading-[24px] tracking-[0.5px];
   }
 
   caption {
-    @apply font-bold text-[20px] leading-[1] tracking-[3px] uppercase;
+    @apply font-bold text-[16px] leading-[1.4] tracking-[3px] uppercase;
   }
+
+  @media (min-width: 768px) {
+    caption {
+      @apply text-[18px];
+    }
+  }
+
+  @media (min-width: 1024px) {
+    caption {
+      @apply text-[20px];
+    }
+  }
+
+
 }

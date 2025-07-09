@@ -10,7 +10,7 @@ export default function AnimatedSquare() {
         ease: "easeInOut",
         repeat: Infinity,
         repeatType: "loop",}}
-      className="w-[500px] h-auto mr-10"
+      className="hidden sm:block sm:w-[200px] md:w-[500px] h-auto mr-10"
     >
       <img
         src="/images/Shapes.png"

@@ -1,10 +1,10 @@
 export default function Testimony() {
   return (
-    <div className="m-[80px]">
-      <div className="flex flex-col items-center justify-center gap-14">
-        <h2 className="font-bold mb-10 text-center">Ils nous ont fait confiance</h2>
+    <div className="my-[80px] md:my-[40px] mx-6 md:mx-0 max-w-[1280px] mx-auto">
+      <div className="flex flex-col items-center justify-center gap-8 md:gap-14">
+        <h2 className="mb-0 sm:mb-4 md:mb-10 text-center">Ils nous ont fait confiance</h2>
 
-        <div className="flex flex-wrap justify-center gap-16  items-center">
+        <div className="flex flex-wrap justify-center gap-10 md:gap-16  items-center">
 
           <div className="flex items-center gap-2 space-y-2 w-34">
             <svg width="34" height="32" viewBox="0 0 34 32" fill="none" xmlns="http://www.w3.org/2000/svg">

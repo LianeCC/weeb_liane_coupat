@@ -14,8 +14,8 @@ function AppLayout() {
     <div className="min-h-screen w-full bg-[#0f1729] text-white">
       {isContactPage ? <HeaderContact /> : <Header />}
 
-      <main className="flex justify-center px-4">
-        <div className="w-full max-w-[1440px]">
+      <main className="flex justify-center">
+        <div>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
@@ -23,7 +23,7 @@ function AppLayout() {
           </Routes>
         </div>
       </main>
-
+      
       <Footer />
     </div>
   )

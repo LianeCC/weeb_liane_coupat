@@ -2,12 +2,14 @@ import BanText from "../components/BanText";
 import Hero from "../components/Hero";
 import Testimony from "../components/Testimony";
 import AnimatedSquare from "../components/AnimatedSquare";
+import Separator from "../components/Separator";
 
 export default function Home() {
   return (
     <div>
       <Hero />
       <Testimony />
+      <Separator />
       <BanText
         caption="Des ressources pour tous les niveaux"
         titleParts={[
