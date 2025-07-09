@@ -12,11 +12,11 @@ export default function HeaderContact() {
         }}
       >
         <div className="flex items-center gap-8">
-          <Link to="/" className="hover:text-secondary"><h5>weeb</h5></Link>
-          <Link to="/contact" className="text-white font-semibold hover:underline">Contact</Link>
+          <Link to="/" className="hover:text-tertiary"><h5>weeb</h5></Link>
+          <Link to="/contact" className="text-white font-semibold hover:text-tertiary">Contact</Link>
         </div>
         <div>
-          <Button to="/login" className="text-[16px] py-[6px] px-[32px] hover:underline">
+          <Button to="/login" className="text-[16px] py-[6px] px-[32px] hover:bg-tertiary hover:border-tertiary">
             Se connecter
           </Button>
         </div>

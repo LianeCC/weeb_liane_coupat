@@ -4,6 +4,7 @@ import Button from "./Button"
 export default function Header() {
   return (
     <header className="w-full flex justify-center bg-[#0f1729] py-6">
+      
       <nav
         className="w-[1000px] h-[96px] flex justify-between items-center px-6 rounded-[20px]"
         style={{
@@ -13,17 +14,18 @@ export default function Header() {
         }}
       >
         <div className="flex items-center gap-8">
-        <h5>weeb</h5>
-        <Link to="/" className="text-white text-lg font-semibold hover:underline">About us</Link>
-          <Link to="/contact" className="text-white hover:underline">Contact</Link>
-          </div>
-          <div className="flex items-center gap-10">
-          <Link to="/login" className="text-white hover:underline">Log In</Link>
-          <Button to="/" className="text-[16px] py-[6px] px-[32px] hover:underline">
+          <h5>weeb</h5>
+          <Link to="/" className="text-white text-lg font-semibold hover:text-tertiary">About us</Link>
+          <Link to="/contact" className="text-white hover:text-tertiary">Contact</Link>
+        </div>
+        <div className="flex items-center gap-10">
+          <Link to="/login" className="text-white hover:text-tertiary">Log In</Link>
+          <Button to="/" className="text-[16px] py-[6px] px-[32px] hover:bg-tertiary hover:border-tertiary">
             Join Now
           </Button>
         </div>
       </nav>
+
     </header>
   )
 }
