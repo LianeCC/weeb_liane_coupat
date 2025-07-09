@@ -2,7 +2,7 @@ export default function Testimony() {
   return (
     <div className="my-[80px] md:my-[40px] mx-6 md:mx-0 max-w-[1280px] mx-auto">
       <div className="flex flex-col items-center justify-center gap-8 md:gap-14">
-        <h2 className="mb-0 sm:mb-4 md:mb-10 text-center">Ils nous ont fait confiance</h2>
+        <h2 className="px-4 sm:px-2 md:px-0 mb-0 sm:mb-4 md:mb-10 text-center">Ils nous ont fait confiance</h2>
 
         <div className="flex flex-wrap justify-center gap-10 md:gap-16  items-center">
 

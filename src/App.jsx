@@ -1,18 +1,14 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom"
-import Home from "./pages/Home"
-import Contact from "./pages/Contact"
-import Login from "./pages/Login"
-import Header from "./components/Header"
-import HeaderContact from "./components/HeaderContact"
-import Footer from "./components/Footer"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import Login from "./pages/Login";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function AppLayout() {
-  const location = useLocation()
-  const isContactPage = location.pathname === "/contact"
-
   return (
     <div className="min-h-screen w-full bg-[#0f1729] text-white">
-      {isContactPage ? <HeaderContact /> : <Header />}
+      <Header />
 
       <main className="flex justify-center">
         <div>
@@ -23,10 +19,10 @@ function AppLayout() {
           </Routes>
         </div>
       </main>
-      
+
       <Footer />
     </div>
-  )
+  );
 }
 
 export default function App() {
@@ -34,5 +30,5 @@ export default function App() {
     <Router>
       <AppLayout />
     </Router>
-  )
+  );
 }

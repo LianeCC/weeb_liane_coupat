@@ -37,9 +37,9 @@ export default function LoginForm() {
         </Link>
       </div>
     
-      <div className="text-center mt-4 text-sm">
+      <div className="text-center mt-4 text-sm mx-28 sm:mx-0 md:mx-0 text-[#C4C4C4]">
         Vous n'avez pas de compte ? Vous pouvez en {" "}
-        <Link to="/signup" className="py-2 border-b hover:text-tertiary hover:border-tertiary font-semibold">
+        <Link to="/signup" className="py-2 border-b text-white hover:text-tertiary hover:border-tertiary font-semibold">
           créer un
         </Link>
       </div>

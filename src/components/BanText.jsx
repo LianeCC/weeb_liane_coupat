@@ -14,9 +14,9 @@ export default function BanText({
   const layout = imageLeft ? "flex-col-reverse md:flex-row-reverse" : "flex-col-reverse md:flex-row";
 
   return (
-    <section className="py-0 md:py-16 my-16 md:my-0 mx-6 md:mx-0">
+    <section className="py-0 md:py-16 my-16 md:my-0 mx-6 sm:mx-4 md:mx-0">
       
-      <div className={`flex ${layout} justify-between items-center mx-8 md:mx-4 max-w-[1280px] mx-auto`}>
+      <div className={`flex ${layout} justify-between items-center mx-8 sm:mx-4 md:mx-4 max-w-[1280px] mx-auto`}>
         
         {/* Bloc image */}
         <div className="hidden sm:block md:block flex justify-center items-center">
@@ -25,7 +25,7 @@ export default function BanText({
             <img
               src={imageSrc}
               alt={imageAlt} 
-              className="w-[400px] sm:w-[800px] md:w-[1280px] h-auto object-cover"
+              className="w-[400px] sm:w-[600px] md:w-[1280px] h-auto object-cover"
             />
           )}
         </div>
