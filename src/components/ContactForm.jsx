@@ -17,7 +17,7 @@ export default function ContactForm() {
               <input
                 type="text"
                 placeholder={field.placeholder}
-                className="w-full text-center text-secondary placeholder-secondary px-4 py-2 bg-transparent border-b border-secondary focus:outline-none focus:ring-2 focus:ring-secondary focus:placeholder-transparent focus:border-secondary transition"              />
+                className="w-full text-center text-secondary placeholder-secondary px-4 py-2 bg-transparent border-b border-secondary focus:outline-none focus:ring-2 focus:ring-secondary focus:placeholder-transparent focus:border-secondary transition"/>
             </div>
           ))}
         </div>
@@ -30,8 +30,7 @@ export default function ContactForm() {
               <input
                 type="text"
                 placeholder={field.placeholder}
-                className="w-full text-center text-secondary placeholder-secondary px-4 py-2 bg-transparent border-b border-secondary focus:outline-none focus:ring-2 focus:ring-secondary focus:placeholder-transparent focus:border-secondary transition"
-              />
+                className="w-full text-center text-secondary placeholder-secondary px-4 py-2 bg-transparent border-b border-secondary focus:outline-none focus:ring-2 focus:ring-secondary focus:placeholder-transparent focus:border-secondary transition"/>
             </div>
           ))}
         </div>
@@ -42,7 +41,7 @@ export default function ContactForm() {
           <textarea
             rows="1"
             placeholder="Message"
-            className="w-full text-center text-secondary placeholder-secondary px-4 py-2 bg-transparent border-b border-secondary focus:outline-none focus:ring-2 focus:ring-secondary focus:placeholder-transparent focus:border-secondary transition"          />
+            className="w-full text-center text-secondary placeholder-secondary px-4 py-2 bg-transparent border-b border-secondary focus:outline-none focus:ring-2 focus:ring-secondary focus:placeholder-transparent focus:border-secondary transition"/>
         </div>
 
         <div className="text-center">
