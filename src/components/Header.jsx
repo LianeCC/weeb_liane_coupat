@@ -15,16 +15,16 @@ export default function Header() {
           boxShadow: "0px 0px 15px 0px #00000012, 0px 25px 50px -12px #00000040",
         }}
       >
-        {/* Left side: Logo + Navigation */}
+        {/* logo + about us + contact*/}
         <div className="flex items-center gap-8">
           <h5>weeb</h5>
           <div className="hidden md:flex items-center gap-6">
-            <Link to="/" className="text-white text-lg font-semibold hover:text-tertiary">About us</Link>
+            <Link to="/" className="text-white hover:text-tertiary">About us</Link>
             <Link to="/contact" className="text-white hover:text-tertiary">Contact</Link>
           </div>
         </div>
 
-        {/* Right side: Auth links + Button */}
+        {/* log in + join now */}
         <div className="hidden md:flex items-center gap-10">
           <Link to="/login" className="text-white hover:text-tertiary">Log In</Link>
           <Button to="/" className="text-[16px] py-[6px] px-[32px] hover:bg-tertiary hover:border-tertiary">
@@ -32,7 +32,7 @@ export default function Header() {
           </Button>
         </div>
 
-        {/* Burger menu icon (Mobile) */}
+        {/* Burger icone */}
         <div className="md:hidden">
           <button onClick={() => setIsOpen(!isOpen)} className="text-white bg-secondary rounded p-2 text-2xl">
             {isOpen ? <FiX /> : <FiMenu />}
@@ -40,7 +40,7 @@ export default function Header() {
         </div>
       </nav>
 
-      {/* Mobile Menu */}
+      {/* menu mobile */}
       {isOpen && (
         <div className="absolute top-[100%] left-0 w-full bg-[#0f1729e6] backdrop-blur-lg shadow-lg px-6 py-8 flex flex-col border-b gap-4 md:hidden">
           <Link to="/" className="text-white hover:text-tertiary" onClick={() => setIsOpen(false)}>About us</Link>

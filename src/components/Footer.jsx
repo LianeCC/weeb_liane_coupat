@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="bg-white text-black">
 
-      <div className="max-w-[1280px] mx-auto mt-10 py-16 flex flex-col md:flex-row md:flex-wrap md:justify-between pl-[80px] gap-10">
+      <div className="max-w-[1280px] mx-auto mt-10 py-16 flex flex-col md:flex-row md:flex-wrap md:justify-between pl-[80px] gap-20 sm:gap-10 md:gap-10">
         
         <div className="w-full md:w-1/6 text-left">
           <h5>weeb</h5>

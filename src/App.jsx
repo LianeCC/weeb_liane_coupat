@@ -4,6 +4,7 @@ import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 function AppLayout() {
   return (
@@ -21,6 +22,7 @@ function AppLayout() {
       </main>
 
       <Footer />
+      <ScrollToTopButton />
     </div>
   );
 }
