@@ -6,7 +6,7 @@ rapport disponible : https://docs.google.com/document/d/15F239rzl20Posz2en7324xu
 ## Objectif
 
 - semaine 1.Développement des pages **Home**, **Contact** et **Login** à partir d'une maquette Figma.
-- semaine 2.
+- semaine 2.Intégration du backend (liste d’articles + détail).
 - semaine 3.
 - semaine 4.
 
@@ -24,6 +24,19 @@ rapport disponible : https://docs.google.com/document/d/15F239rzl20Posz2en7324xu
 ```bash
 npm install
 npm run dev
+```
 
+Ouvre : http://localhost:5173
 
+## Connexion au backend
 
+Par défaut, l’URL API utilise le fallback local :
+- `http://127.0.0.1:8000`
+
+## Routes disponibles
+
+- / : Home
+- /contact : formulaire (envoie sur POST /api/contact/)
+- /login : page maquette
+- /articles : liste d’articles (6 par page)
+- /articles/:slug : détail d’un article
