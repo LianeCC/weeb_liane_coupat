@@ -32,7 +32,7 @@ export default function BanText({
 
         {/* Bloc texte */}
         <div className="w-full flex flex-col gap-4 sm:gap-8 md:gap-10 text-left">
-          <caption className="uppercase text-left">{caption}</caption>
+          <p className="uppercase text-left">{caption}</p>
           
           <h1 className="text-left">
             {titleParts.map(({ text, highlight }, index) => (

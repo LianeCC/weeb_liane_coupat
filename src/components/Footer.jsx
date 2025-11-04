@@ -31,10 +31,10 @@ export default function Footer() {
         </div>
 
         <div className="w-full md:w-1/6 text-left">
-          <h6 className="text-slate-400 mb-6">RESOURCES</h6>
+          <h6 className="text-slate-400 mb-6">RESSOURCES</h6>
           <ul className="space-y-6 text-[#0F172A]">
             <li><a href="#">Help center</a></li>
-            <li><a href="#">Blog</a></li>
+            <li><a href="articles">Blog</a></li>
             <li><a href="#">Tutorials</a></li>
           </ul>
         </div>

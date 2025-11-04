@@ -1,10 +1,13 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ScrollToTopButton from "./components/ScrollToTopButton";
+import ArticleDetail from "./pages/ArticleDetail";
+import Articles from "./pages/Articles";
+
 
 function AppLayout() {
   return (
@@ -15,8 +18,12 @@ function AppLayout() {
         <div>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/articles" element={<Articles />} />
+            <Route path="/articles/:slug" element={<ArticleDetail />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/blog" element={<Navigate to="/articles" replace />} />
+
           </Routes>
         </div>
       </main>
