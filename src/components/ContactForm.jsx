@@ -7,22 +7,36 @@ export default function ContactForm() {
   const [phone_number, setPhone] = useState("");
   const [email_address, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [status, setStatus] = useState("idle");
+  const [feedback, setFeedback] = useState("");;
 
   async function handleSubmit(e) {
     e.preventDefault();
-    await apiPost("/api/contact/", {
-      first_name,
-      last_name,
-      phone_number,
-      email_address,
-      message,
-    });
-    // reset
-    setLast("");
-    setFirst("");
-    setPhone("");
-    setEmail("");
-    setMessage("");
+    setStatus("loading");
+    setFeedback("");
+
+    try {
+      await apiPost("/api/contact/", {
+        first_name,
+        last_name,
+        phone_number,
+        email_address,
+        message,
+      });
+
+      // reset
+      setLast("");
+      setFirst("");
+      setPhone("");
+      setEmail("");
+      setMessage("");
+
+      setFeedback("Merci ! Votre message a bien été envoyé.");
+      setStatus("success");
+    } catch {
+      setFeedback("Oups… l’envoi a échoué. Merci de réessayer.");
+      setStatus("error");
+    }
   }
 
   return (
@@ -84,10 +98,25 @@ export default function ContactForm() {
             type="submit"
             className="bg-secondary hover:bg-tertiary text-white font-semibold px-6 py-2 rounded"
           >
-            Contact
+            Envoyer
           </button>
         </div>
       </form>
+
+      {(status === "success" || status === "error") && (
+        <div
+          role="status"
+          aria-live="polite"
+          className={`max-w-3xl w-full mx-auto mb-4 rounded-[12px] border px-4 py-3 text-sm ${
+            status === "success"
+              ? "border-purple-400 bg-purple-50 text-purple-800"
+              : "border-red-400 bg-red-50 text-red-800"
+          }`}
+        >
+          {feedback}
+        </div>
+      )}
+
     </div>
   );
 }

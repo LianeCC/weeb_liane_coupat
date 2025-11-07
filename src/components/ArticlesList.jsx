@@ -3,13 +3,12 @@ import { Link } from "react-router-dom";
 import { apiGet } from "../services/api";
 
 export default function ArticlesList() {
-  const [data, setData] = useState(null);     // DRF {count,next,previous,results}
+  const [data, setData] = useState(null);     
   const [error, setError] = useState("");
   const [page, setPage] = useState(1);
 
   // états UI du filtre
   const [q, setQ] = useState("");
-  const [author, setAuthor] = useState("");
   const [ordering, setOrdering] = useState("-created_at");
 
   // query pr l'API
@@ -17,10 +16,9 @@ export default function ArticlesList() {
     const p = new URLSearchParams();
     p.set("page", String(page));
     if (q.trim()) p.set("q", q.trim());
-    if (author.trim()) p.set("author", author.trim());
     if (ordering) p.set("ordering", ordering);
     return p.toString();
-  }, [page, q, author, ordering]);
+  }, [page, q, ordering]);
 
   useEffect(() => {
     setError("");
@@ -41,7 +39,6 @@ export default function ArticlesList() {
 
   function resetFilters() {
     setQ("");
-    setAuthor("");
     setOrdering("-created_at");
     setPage(1);
   }
@@ -63,40 +60,48 @@ export default function ArticlesList() {
           />
         </div>
 
-        <div className="flex-1 min-w-[180px]">
-          <label className="block text-sm opacity-80 mb-1">Auteur</label>
-          <input
-            type="text"
-            value={author}
-            onChange={(e) => setAuthor(e.target.value)}
-            placeholder="Nom de l’auteur"
-            className="w-full px-3 py-2 rounded border border-white/20 bg-white/5"
-          />
-        </div>
-
-        <div className="min-w-[200px]">
+        <div className="min-w-[260px]">
           <label className="block text-sm opacity-80 mb-1">Tri</label>
-          <select
-            value={ordering}
-            onChange={(e) => { setOrdering(e.target.value); setPage(1); }}
-            className="w-full px-3 py-2 rounded border border-white/20 bg-white/5"
-          >
-            <option value="-created_at">Plus récents</option>
-            <option value="created_at">Plus anciens</option>
-          </select>
+          <div className="flex gap-2">
+            <button
+              type="button"
+              onClick={() => { setOrdering("-created_at"); setPage(1); }}
+              aria-pressed={ordering === "-created_at"}
+              className={`h-12 px-3 rounded border transition
+                ${ordering === "-created_at"
+                  ? "bg-white/15 border-white/30"
+                  : "bg-white/5 border-white/20 hover:bg-white/10"}`}
+              title="Plus récents d'abord"
+            >
+              → récents
+            </button>
+
+            <button
+              type="button"
+              onClick={() => { setOrdering("created_at"); setPage(1); }}
+              aria-pressed={ordering === "created_at"}
+              className={`h-12 px-3 rounded border transition
+                ${ordering === "created_at"
+                  ? "bg-white/15 border-white/30"
+                  : "bg-white/5 border-white/20 hover:bg-white/10"}`}
+              title="Plus anciens d'abord"
+            >
+              → anciens 
+            </button>
+          </div>
         </div>
 
         <div className="flex gap-2">
           <button
             type="submit"
-            className="px-4 py-2 rounded border border-white/20 hover:bg-white/10"
+            className="h-12 px-4 py-2 rounded border border-white/20 hover:bg-white/10"
           >
             Filtrer
           </button>
           <button
             type="button"
             onClick={resetFilters}
-            className="px-4 py-2 rounded border border-white/20 hover:bg-white/10"
+            className="h-12 px-4 py-2 rounded border border-white/20 hover:bg-white/10"
           >
             Réinitialiser
           </button>
